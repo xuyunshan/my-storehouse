@@ -1,0 +1,9 @@
+satState 同步还是异步？
+  有时候同步有时候异步（直接用是异步;setTimeout，自定义事件是同步）
+
+性能优化：
+  1.永远是面试的重点（尤其是react）；
+  2.对react来说更加重要；
+  3.回顾江satState是重点讲不可变值
+
+  shouldComponentUpdate（简称scu）
