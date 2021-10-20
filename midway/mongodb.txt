@@ -1,0 +1,13 @@
+运行 MongoDB
+我们可以使用 brew 命令或 mongod 命令来启动服务。
+
+brew 启动：
+
+brew services start mongodb-community@4.4
+brew 停止：
+
+brew services stop mongodb-community@4.4
+mongod 命令后台进程方式：
+
+mongod --config /usr/local/etc/mongod.conf --fork这种方式启动要关闭可以进入 mongo shell 控制台来实现：
+> db.adminCommand({ "shutdown" : 1 })
