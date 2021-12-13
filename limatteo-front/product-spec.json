@@ -1,0 +1,86 @@
+{
+  "name": "limatteo-frontend",
+  "group": "com.linkedin.@spec.name@",
+  "version": "0.0.*",
+  "scmUrl": "ssh://git.corp.linkedin.com:29418/multiproducts/limatteo-frontend.git",
+  "comment": "",
+  "description": "job events campaign in cn",
+  "build": {
+    "commands": {
+      "setup": "yarn install",
+      "build": "yarn pack",
+      "test": "yarn test"
+    },
+    "toolchains": {
+      "gradle": {
+        "plugins": {
+          "buildScans": "com.gradle:build-scan-plugin:2.1"
+        },
+        "version": "5.*"
+      }
+    },
+    "type": "gradle",
+    "versions": {
+      "java": "1.8.0_121"
+    }
+  },
+  "runtime": {},
+  "review": {},
+  "topology": {
+    "applications": {}
+  },
+  "archive": {
+    "artifacts": {},
+    "databases": {},
+    "images": {},
+    "repo_name": "npm-internal"
+  },
+  "dependencyResolution": {},
+  "external": {
+    "axios": "npm:axios:0.21.1",
+    "babel-eslint": "npm:babel-eslint:10.1.0",
+    "bulma": "npm:bulma:0.9.1",
+    "callapp-lib": "npm:callapp-lib:3.5.0",
+    "eslint": "npm:eslint:7.15.0",
+    "eslint-config-prettier": "npm:eslint-config-prettier:6.14.0",
+    "eslint-plugin-node": "npm:eslint-plugin-node:11.1.0",
+    "eslint-plugin-prettier": "npm:eslint-plugin-prettier:3.1.4",
+    "eslint-plugin-vue": "npm:eslint-plugin-vue:5.0.0",
+    "gridsome": "npm:gridsome:0.7.23",
+    "husky": "npm:husky:4.3.0",
+    "jest": "npm:jest:26.6.0",
+    "node-sass": "npm:node-sass:4.14.1",
+    "npm-run-all": "npm:npm-run-all:4.1.5",
+    "postcss-pxtorem": "npm:postcss-pxtorem:5.1.1",
+    "prettier": "npm:prettier:2.1.2",
+    "sass-loader": "npm:sass-loader:10.0.4",
+    "swiper": "npm:swiper:5.4.5",
+    "vue-awesome-swiper": "npm:vue-awesome-swiper:4.1.1"
+  },
+  "product": {
+    "limatteo-cli": {
+      "libraries": [
+        "@linkedin/limatteo-cli"
+      ],
+      "version": "0.0.1"
+    },
+    "node-mp-bridge": {
+      "libraries": [
+        "@linkedin/node-mp-bridge"
+      ],
+      "version": "1.2.15"
+    },
+    "pemberly-core": {
+      "libraries": [
+        "@linkedin/pemberly-core"
+      ],
+      "version": "2.0.99"
+    }
+  },
+  "trunkDev": {
+    "autoRevert": false,
+    "fileArchiveGlob": "yarn-error.log,yarn-debug.log,build/pemberly-ligradle.log,build/just-ligradle.log,build/pemberly-ligradle.log,build/logs/[a-zA-Z]-[0-9].log",
+    "hudsonPool": "PF_RHEL7"
+  },
+  "extSCM": {}
+}

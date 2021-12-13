@@ -1,0 +1,91 @@
+{
+  "name": "camo-frontend",
+  "group": "com.linkedin.@spec.name@",
+  "version": "0.0.*",
+  "scmUrl": "ssh://org-70@linkedin.githubprivate.com/multiproduct/camo-frontend.git",
+  "comment": "",
+  "description": "mobile campaign generator",
+  "build": {
+    "commands": {
+      "build": "yarn pack",
+      "setup": "yarn install",
+      "test": "yarn test"
+    },
+    "toolchains": {
+      "gradle": {
+        "plugins": {
+          "buildScans": "com.gradle:build-scan-plugin:2.1"
+        },
+        "version": "5.*"
+      }
+    },
+    "type": "gradle",
+    "versions": {
+      "java": "1.8.0_121"
+    }
+  },
+  "runtime": {},
+  "review": {},
+  "topology": {
+    "applications": {}
+  },
+  "archive": {
+    "artifacts": {},
+    "databases": {},
+    "images": {},
+    "repo_name": "npm-internal"
+  },
+  "dependencyResolution": {},
+  "external": {
+    "axios": "npm:axios:0.21.1",
+    "babel-eslint": "npm:babel-eslint:10.1.0",
+    "eslint": "npm:eslint:7.31.0",
+    "eslint-config-prettier": "npm:eslint-config-prettier:6.15.0",
+    "eslint-config-react-app": "npm:eslint-config-react-app:6.0.0",
+    "eslint-import-resolver-alias": "npm:eslint-import-resolver-alias:1.1.2",
+    "eslint-plugin-import": "npm:eslint-plugin-import:2.23.4",
+    "eslint-plugin-node": "npm:eslint-plugin-node:11.1.0",
+    "eslint-plugin-prettier": "npm:eslint-plugin-prettier:3.4.0",
+    "esm": "npm:esm:3.2.25",
+    "gatsby": "npm:gatsby:3.9.1",
+    "gatsby-plugin-alias-imports": "npm:gatsby-plugin-alias-imports:1.0.5",
+    "gatsby-plugin-postcss": "npm:gatsby-plugin-postcss:4.10.0-next.1",
+    "gatsby-plugin-react-helmet": "npm:gatsby-plugin-react-helmet:4.7.0",
+    "gatsby-plugin-sass": "npm:gatsby-plugin-sass:4.10.0-next.1",
+    "husky": "npm:husky:4.3.8",
+    "jest": "npm:jest:26.6.3",
+    "npm-run-all": "npm:npm-run-all:4.1.5",
+    "postcss": "npm:postcss:8.3.5",
+    "postcss-preset-env": "npm:postcss-preset-env:6.7.0",
+    "postcss-pxtorem": "npm:postcss-pxtorem:6.0.0",
+    "prettier": "npm:prettier:2.3.2",
+    "qs": "npm:qs:6.10.1",
+    "react": "npm:react:17.0.2",
+    "react-dom": "npm:react-dom:17.0.2",
+    "react-helmet": "npm:react-helmet:6.1.0",
+    "router-at-reach": "npm:@reach/router:1.3.4",
+    "sass": "npm:sass:1.35.2",
+    "swiper": "npm:swiper:6.7.5",
+    "typescript": "npm:typescript:4.3.5"
+  },
+  "product": {
+    "node-mp-bridge": {
+      "libraries": [
+        "@linkedin/node-mp-bridge"
+      ],
+      "version": "1.2.15"
+    },
+    "pemberly-core": {
+      "libraries": [
+        "@linkedin/pemberly-core"
+      ],
+      "version": "2.0.99"
+    }
+  },
+  "trunkDev": {
+    "autoRevert": false,
+    "fileArchiveGlob": "yarn-error.log,yarn-debug.log,build/pemberly-ligradle.log,build/just-ligradle.log,build/pemberly-ligradle.log,build/logs/[a-zA-Z]-[0-9].log",
+    "hudsonPool": "PF_RHEL7"
+  },
+  "extSCM": {}
+}
