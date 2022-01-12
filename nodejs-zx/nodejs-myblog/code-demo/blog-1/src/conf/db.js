@@ -9,7 +9,7 @@ if (env === 'dev') {
     MYSQL_CONF = {
         host: 'localhost',
         user: 'root',
-        password: 'Mysql_2018',
+        password: 'Welcome20210220!',
         port: '3306',
         database: 'myblog'
     }
@@ -26,7 +26,7 @@ if (env === 'production') {
     MYSQL_CONF = {
         host: 'localhost',
         user: 'root',
-        password: 'Mysql_2018',
+        password: 'Welcome20210220!',
         port: '3306',
         database: 'myblog'
     }
