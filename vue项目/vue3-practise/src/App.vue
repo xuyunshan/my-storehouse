@@ -1,119 +1,94 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
+import Guide from "./views/Guide.vue";
+import Resource from "./views/Resource.vue";
+import Components from "./views/Components.vue";
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class="homePage">
+    <header>
+      <div class="navbar-wrapper">
+        <div class="container">
+          <div class="logo-container">
+            <img
+              src="https://element-plus.gitee.io/images/element-plus-logo.svg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <nav class="navbar-menu">
+              <RouterLink class="menu-link-item" to="/guide"> 指南 </RouterLink>
+              <RouterLink class="menu-link-item" to="/components">
+                组件
+              </RouterLink>
+              <RouterLink class="menu-link-item" to="/resource">
+                资源
+              </RouterLink>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <style>
-@import '@/assets/base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
+@import "@/assets/base.css";
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-nav {
+  position: fixed;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  top: 0;
+  left: 0;
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.navbar-wrapper {
+  background-color: #fff;
+  color: var(--text-color);
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 12px 0 24px;
+  height: var(--header-height);
+  top: 0;
 }
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 }
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 55px;
 }
-
-nav a:first-of-type {
-  border: 0;
+.logo-container img {
+  width: 128px;
+  height: 28px;
 }
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+.navbar-menu {
+  display: flex;
+}
+.menu-link-item {
+  display: block;
+  align-items: center;
+  padding: 0 12px;
+  line-height: calc(var(--nav-height) - 3px);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color var(--el-transition-duration);
+  border-bottom: 2px solid transparent;
+}
+main {
+  padding-top: var(--nav-height);
 }
 </style>
