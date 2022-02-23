@@ -1,0 +1,19 @@
+export const navList = [
+    {
+        name:'vue-use',
+        path:'',
+        key:'1',
+        children:[
+            {
+                name:'useMouse',
+                path:'/use-mouse',
+                key:'1-1'
+            }
+        ]
+    },
+    {
+        name:'vue-uswdqe',
+        path:'',
+        key:'2',
+    },
+]

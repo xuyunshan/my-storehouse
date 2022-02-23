@@ -8,8 +8,10 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^0.2.7",
     "@vueuse/core": "^7.6.2",
     "element-plus": "^2.0.2",
+    "sass": "^1.49.8",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
   },

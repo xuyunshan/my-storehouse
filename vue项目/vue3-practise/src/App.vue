@@ -11,13 +11,12 @@ import { RouterLink, RouterView } from "vue-router";
       <div class="navbar-wrapper">
         <div class="container">
           <div class="logo-container">
-            <img
-              src="https://element-plus.gitee.io/images/element-plus-logo.svg"
-              alt=""
-            />
+            <RouterLink class="menu-link-item" to="/">
+              <img src="./assets/image/logo.png"
+            /></RouterLink>
           </div>
           <div class="content">
-            <nav class="navbar-menu">
+            <nav class="navbar-menu" @click="clickNav">
               <RouterLink class="menu-link-item" to="/guide"> 指南 </RouterLink>
               <RouterLink class="menu-link-item" to="/components">
                 组件
@@ -31,14 +30,13 @@ import { RouterLink, RouterView } from "vue-router";
       </div>
     </header>
     <main>
-
       <RouterView />
     </main>
   </div>
 </template>
 
 <style>
-@import "@/assets/base.css";
+@import "@/assets/styles/base.css";
 header {
   position: fixed;
   width: 100%;

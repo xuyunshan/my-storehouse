@@ -12,26 +12,20 @@ const router = createRouter({
     {
       path: '/guide',
       name: 'guide',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/Guide.vue')
     },
     {
       path: '/components',
       name: 'components',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Components.vue')
+      component: () => import('../views/Components.vue'),
+      children:[
+        {path:'use-mouse',component:() => import('../views/Components.vue')}
+      ]
     },
     {
       path: '/resource',
       name: 'resource',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Resource.vue')
+      component: () => import('../components/vueUse/use-mouse.vue')
     }
   ]
 })
